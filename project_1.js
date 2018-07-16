@@ -26,7 +26,7 @@ function time_limite(){
     var resulth = document.getElementById("resulth");
 
 var result = new Date(currentTime.getTime() + (hourIn *3600000)+ (minIn *60*1000));
-    
+
     var newhour = result.getHours();
     var newmin = result.getMinutes();
     var ampm = newhour > 11 ? 'PM' : 'AM';
@@ -35,20 +35,20 @@ var result = new Date(currentTime.getTime() + (hourIn *3600000)+ (minIn *60*1000
        newmin = "0" + newmin;
       }
 
-    if (newhour < 12)
+    if (newhour <= 12)
         {
-            resulth.innerHTML = ("Hour: " + newhour + ":Elie" + newmin + " "+ ampm);
+            resulth.innerHTML = ("Hour: " + newhour + ":" + newmin + " "+ ampm);
         }
-    
+
     else if (newhour >= 12 && newhour < 17)
     {
             var hourn = newhour - 12;
             resulth.innerHTML = ("Hour: " + hourn + ":" + newmin + " " + ampm);
         }
-    
-    else if (newhour >= 17) 
+
+    else if (newhour >= 17)
     {
             resulth.innerHTML =("5:00 WE ARE CLOSED");
         }
-        
+
 }
