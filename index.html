@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>Liberty testing Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+ <style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url("b_pic.png");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style> 
+<body>   
+
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+         <div class="w3-display-topleft w3-padding-large w3-xlarge">
+              Testing Services 
+         </div> 
+        <div class="w3-display-middle">
+            <table>
+               <tr>
+                <td> <h1 class="w3-jumbo w3-animate-top">Current Time: </h1> </td>
+                <td> <h1 class="w3-jumbo w3-animate-top"> <div id= "time_span">  </div> </h1></td>
+              </tr>
+           </table>
+           <table>
+              <tr>
+                <td> <h1>Please input time limit: </h1></td>
+                <td> <input type ="text" id= "hourIn" size ="3"/></td>
+                <td> <input type ="text" id= "minIn" size ="3"/></td>
+                <td> <button id="myBtn" onclick="time_limite()"> Check </button></td>                
+             </tr>
+          </table>
+           <hr class="w3-border-grey" style="margin:auto;width:40%">
+            <h1 class="w3-jumbo w3-animate-top w3-large w3-center"> <div 
+                id="resulth"> </div>
+            </h1>
+           <script>
+                   var input = document.getElementById("minIn");
+                   
+                   input.addEventListener("keyup", function(event) {
+                        event.preventDefault();
+                        if (event.keyCode === 13) {
+                           document.getElementById("myBtn").click();
+                        }
+                   });
+               </script>
+           
+ </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div>
+</div>
+</body>
+<script src ="project_1.js"></script>
+</html>
